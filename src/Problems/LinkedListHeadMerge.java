@@ -98,7 +98,9 @@ public class LinkedListHeadMerge {
         NodeList pointer2 = head;
         
         for(int i=0; i<k-1; i++){
-            if(pointer2 == null) return null;
+            if(pointer2 == null) {
+                return null;
+            }
             pointer2 = pointer2.next;
         }
         
@@ -138,23 +140,22 @@ public class LinkedListHeadMerge {
         node1.data = data;
         node1.next = null;
 
-        if (position == 0) {
-            node1.next = head;
-            return node1;
-        } else {
-            int count = 0;
-            while (head.next != null) {
-                if (count == position) {
-                    NodeList temp = head.next;
-                    head.next = node1;
-                    node1.next = temp;
-                    return head;
-                }
-                count++;
-                head = head.next;
+        NodeList prev=null;   //Pointer to the previous node
+        NodeList curr = head;
+        int count = 0;
+        while (curr.next != null) {
+            count++;
+            prev = curr;
+            curr = curr.next;
+            if (prev.next == null) {
+                node1.next = head;
+                head = node1;
+            } else {
+                node1.next = curr;
+                prev.next = node1;
             }
-            return head;
         }
+        return head;
     }
 
     public static NodeList delete(NodeList head, int position) {

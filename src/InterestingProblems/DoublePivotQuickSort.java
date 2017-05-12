@@ -20,7 +20,7 @@ public class DoublePivotQuickSort {
 		return partition(array,start,end);
 	}
 
-	public int partition(int[] array, int start, int end){
+	private int partition(int[] array, int start, int end){
 		int x = array[end];
 		int i = start-1;
 		for(int j = start;j<end;j++){

@@ -113,21 +113,23 @@ public class Sorting {
 //				sortedArray.length - 1, 8));
 		
 		
-		Scanner scan = new Scanner(System.in);
-		int len = scan.nextInt();
-		
-		Integer[] arrIn = new Integer[len];
-		
-		for(int i=0; i< len ; i++){
-		    arrIn[i] = scan.nextInt();
-		}
-		
-		System.out.println("Input: First Line: " + len + "--- Second Line: " + Arrays.toString(arrIn));
-		
-		Arrays.sort(arrIn, Collections.reverseOrder());		
-		System.out.println(Arrays.toString(arrIn));
+//		Scanner scan = new Scanner(System.in);
+//		int len = scan.nextInt();
+//
+//		Integer[] arrIn = new Integer[len];
+//
+//		for(int i=0; i< len ; i++){
+//		    arrIn[i] = scan.nextInt();
+//		}
+//
+//		System.out.println("Input: First Line: " + len + "--- Second Line: " + Arrays.toString(arrIn));
+//
+//		Arrays.sort(arrIn, Collections.reverseOrder());
+//		System.out.println(Arrays.toString(arrIn));
 //		insertionSort1(len, arrIn);
 		
-
+//		Integer x = new Integer(10);
+		System.out.println(Integer.toBinaryString(10));
+		System.out.println(Integer.toBinaryString(10 >>> 1));
 	}
 }
